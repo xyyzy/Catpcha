@@ -1,0 +1,39 @@
+{
+  "model": {
+    "backend": "tensorflow",
+    "model_data": "./model_data",
+    "model_path": "./model_data/cnn_best.h5",
+    "input_size": [
+      128,
+      128
+    ]
+  },
+  "train": {
+    "train_data_folder": "./data/train",
+    "train_data_file": "./data/train/train_label.csv",
+    "train_prob": [
+      0,
+      1
+    ],
+    "pretrained_weights": "./model_data/pre_weight.h5",
+    "batch_size": 16,
+    "learning_rate": 1e-3,
+    "nb_epochs": 1,
+    "warmup_epochs": 3,
+    "saved_weights_name": "CNN_captcha_weight.h5",
+    "debug": true
+  },
+  "valid": {
+    "valid_data_folder": "./data/test",
+    "valid_data_file": "./data/test/test_label.csv",
+    "valid_prob": [
+      0,
+      1
+    ],
+    "valid_times": 1
+  },
+  "predict": {
+    "predict_data_folder": "./data/test",
+    "predict_data_file": "./data/submission.csv"
+  }
+}
